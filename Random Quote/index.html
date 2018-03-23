@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Quote Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Container -->
+    <section id="container">
+
+        <!-- Quote Container -->
+        <section id="quote-container">
+
+            <!-- Quote -->
+            <div id="quote">The best and most beautiful things in the world cannot be seen or even touched, they must be felt with the heart.</div>
+            
+            <!-- Quote Author -->
+            <p class="author">-- <span id="author">Helen Keller</span></p>
+
+        </section> <!-- END Quote Container -->
+
+        <!-- Buttons Container -->
+        <section id="buttons-container">
+
+            <!-- Buttons -->
+            <a href="" target="_blank" id="tweet" class="tweet">Tweet <i class="fab fa-twitter"></i></a>
+            <a href="" id="new-quote" class="new-quote">New Quote</a>
+
+        </section> <!-- END Buttons Container -->
+
+        <!-- Footer -->
+        <footer>
+            <p>Made by <a href="http://kkasbarian.com">Kourken K. </a><sup> &copy;</sup> 2018. All Rights Reserved. <a href="https://github.com/KKasbarian" target="_blank"><i class="fab fa-github"></i></a> <a href="https://twitter.com/KourkenK" target="_blank"><i class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/in/kourken-kasbarian/" target="_blank"><i class="fab fa-linkedin-in"></i></a></p>
+        </footer> <!-- END Footer -->
+
+    </section> <!-- END Main Container -->
+
+<!-- JQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- JS Functions -->
+<script>
+
+/* New Quote Button onClick */
+$('#new-quote').on('click', function(e) {
+    e.preventDefault();
+    $.ajax( {
+        url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+        success: function(data) {
+            var post = data.shift();
+            var quote = $('#quote').html(post.content);
+            var author = $('#author').text(post.title);
+        },
+        cache: false
+    });
+});
+
+/* Tweet Button onClick */
+$('#tweet').on('click', function tweetQuote() {
+    var twitterURL = 'https://twitter.com/intent/tweet?hashtags=quotes,freeCodeCamp&related=freecodecamp&text="';
+    var quote = $("#quote").text();
+    var author = $('#author').text();
+    twitterURL += quote + '" - ' + author;
+    $('#tweet').attr('href', twitterURL);
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+/* Main */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #667db6;
+    background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Main Container */
+
+#container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Quote Container */
+
+#container #quote-container {
+    width: 60%;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8f8f8;
+    border-radius: 6px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.6);
+    opacity: 0.95;
+}
+
+#container #quote-container #quote {
+    text-align: left;
+    font-size: 35px;
+    font-family: 'Nunito', arial, sans-serif;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+#container #quote-container .author {
+    text-align: right;
+    padding-right: 10px;
+    font-size: 19px;
+    font-family: 'Roboto', arial, sans-serif;
+    font-weight: 400;
+}
+
+/* Buttons Container */
+
+#container #buttons-container {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+/* Buttons */
+
+#container #buttons-container a {
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-family: 'Roboto', arial, sans-serif;
+    font-weight: 400;
+    background: #fff;
+    color: #252525;
+    border-radius: 2px;
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.6);
+    -webkit-transition: ease-in .2s;
+       -moz-transition: ease-in .2s;
+        -ms-transition: ease-in .2s;
+         -o-transition: ease-in .2s;
+            transition: ease-in .2s;
+    opacity: 0.9;
+}
+
+/* New Quote Button */
+
+#container #buttons-container .new-quote {
+    padding: 18px 40px;
+}
+
+/* Button actions on different states */
+
+#container #buttons-container a:hover {
+    opacity: 1;
+}
+
+#container #buttons-container a:active {
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
+    top: 3px;
+}
+
+/* Twitter icon on Tweet button */
+
+#container #buttons-container a svg {
+    margin-left: 7px;
+    font-size: 19px;
+    color: #1ea1f3;
+    position: absolute;
+    right: -60px;
+    top: 16px;
+    -webkit-transition: ease-in .4s;
+       -moz-transition: ease-in .4s;
+        -ms-transition: ease-in .4s;
+         -o-transition: ease-in .4s;
+            transition: ease-in .4s;
+}
+
+#container #buttons-container a:hover svg {
+    right: 8px;
+    margin-left: 10px;
+}
+
+/* Footer */
+
+footer p {
+    font-size: 20px;
+    font-family: 'Nunito', arial, sans-serif;
+    font-weight: 400;
+}
+
+footer a {
+    color: #1d1d1d;
+    opacity: 0.9;
+    -webkit-transition: ease-out .3s;
+       -moz-transition: ease-out .3s;
+        -ms-transition: ease-out .3s;
+         -o-transition: ease-out .3s;
+            transition: ease-out .3s;
+}
+
+footer a:hover {
+    color: #000;
+    opacity: 1;
+}
+
+footer svg {
+    margin: 0 5px;
+}
+
+/*** Media Queries ***/
+
+@media screen and (max-height: 600px) {
+    #container {
+        margin-top: 140px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #container {
+        display: block;
+        margin-top: 30px;
+    }
+
+    #container #quote-container {
+        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        padding: 30px 10px;
+    }
+
+    #container #quote-container h1 {
+        font-size: 25px;
+    }
+
+    #container #buttons-container {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    #container #buttons-container a {
+        margin: 15px 0;
+    }
+
+    #container #buttons-container .new-quote {
+        padding: 18px 40px;
+        order: -1;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px 0;
+        background: #fff;
+        opacity: 0.85;
+    }
+
+    footer p {
+        font-size: 19px;
+    }
+
+    footer svg {
+        margin: 0 4px;
+    }
+}
