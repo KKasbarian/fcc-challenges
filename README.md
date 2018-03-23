@@ -1,2 +1,3 @@
-# fcc-challenges
-FreeCodeCamp Challenges
+# FreeCodeCamp Challenges
+
+This is the main page of my personal FCC Challenges.
