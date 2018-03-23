@@ -1,0 +1,315 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+body {
+    font-family: arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+#container {
+	margin: 0 auto;
+	width: 100%;
+	background: #999;
+}
+
+#header-nav {
+	background: #1bd;
+}
+
+#header-nav ul {
+	display: block;
+	text-align: center;
+	height: 60px;
+}
+
+#header-nav ul li {
+	display: inline;
+	padding: 15px 10px;
+}
+
+#header-nav ul li a {
+	display: inline-block;
+	padding: 7px;
+	margin: 0 3px;
+	font-size: 23px;
+	font-family: arial, sans-serif;
+	line-height: -1px;
+	color: white;
+	text-decoration: none;
+}
+
+#header-nav ul li a:hover {
+	color: black;
+	opacity: 0.5;
+	border-bottom: 2px solid white;
+}
+
+#container .name {
+	text-align: center;
+	color: white;
+	font-family: Lato, arial, sans-serif;
+	font-size: 50px;
+}
+
+#container .who {
+	text-align: center;
+	color: white;
+	font-family: monospace, arial, sans-serif;
+	font-style: italic;
+	font-size: 24px;
+}
+
+.first-line {
+	width: 20%;
+}
+
+.person-img, .img-responsive {
+	 margin: 30px auto;
+	 display: block;
+   max-width: 100%;
+}
+
+.caption {
+	text-align: center;
+	font-size: 15px;
+	margin-top: -23px;
+	margin-bottom: 30px;
+}
+
+#describe {
+	background: #fff;
+}
+
+#describe .description {
+	text-align: center;
+	margin: 10px 0;
+	font-size: 21px;
+	font-family: arial, sans-serif;
+}
+
+hr {
+	width: 50%;
+	background: white;
+}
+
+#bio {
+	background: #f7f7f7;
+}
+
+#bio .life {
+	text-align: center;
+	margin: 10px 0;
+	font-size: 20px;
+	font-family: arial, sans-serif;
+} 
+
+blockquote {
+	text-align: center;
+	border-left: 6px solid gray;
+	font-family: arial, sans-serif;
+	font-size: 16px;
+}
+
+cite {
+	margin-left: 20px;
+	font-size: 16px;
+}
+
+#works {
+	width: 75%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#works h1 {
+	text-align: center;
+	margin: 23px;
+	color: #333
+}
+
+#works h2 {
+	margin: 20px 0;
+	font-size: 25px;
+	font-family: arial, sans-serif;
+	font-weight: bold;
+}
+
+#works h4 {
+	margin-bottom: 10px;
+	font-size: 25px;
+	font-family: helvetica, arial, sans-serif;
+}
+
+#works ul {
+	background: #555;
+	margin: 40px 0;
+	border-radius: 8px;
+}
+
+#works ul hr {
+	visibility: hidden;
+}
+
+#ref p {
+	text-align: center;
+	font-size: 26px;
+	font-family: arial, sans-serif;
+	margin: 23px 0;
+}
+
+#ref p a {
+	font-family: arial, sans-serif;
+	color: #26d;
+}
+
+#ref p a:hover {
+	color: #ddd;
+	text-decoration: none;
+}
+
+footer {
+	background: #234;
+	height: 120px;
+}
+
+footer .copy {
+	text-align: center;
+	color: #ddd;
+	font-size: 24px;
+	font-family: arial, sans-serif;
+	padding-top: 17px;
+}
+
+footer .copy .myName {
+	font-weight: bold;
+	color: #fdd;
+}
+
+footer .copy .myName:hover {
+	opacity: 0.7;
+}
+
+._14 {
+    font-size: 23px;
+		margin: 20px 0 0 0;
+		color: white;
+}
+
+.footer-social-icons {
+    width: 270px;
+		height: 37px;
+		margin: 20px auto;
+}
+
+.social-icon {
+    color: #fff;
+}
+
+ul.social-icons {
+		margin: -30px 0 0 0;
+		float: right;
+}
+
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+}
+
+.social-icons a {
+    color: #111;
+    text-decoration: none;
+}
+
+.fa-facebook {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #ccc;
+}
+
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+
+.fa-github {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #ccc;
+}
+
+.fa-github:hover {
+    background-color: #e91;
+}
+
+.fa-linkedin {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #ccc;
+}
+
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+
+.fa-heart {
+	color: red;
+}
+
+/* Responsive section */
+
+@media (max-width: 500px) {
+	.caption {
+		font-size: 18px;
+	}
+	
+	#header-nav {
+		height: 200px;
+	}
+	
+	#header-nav ul {
+		display: block
+	}
+	
+	#header-nav ul li {
+		display: block;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+	
+	#header-nav ul li:hover {
+		background: #ddd;
+		color: black;
+	}
+	
+	#header-nav ul li a {
+		color: white;
+	}
+	
+	#header-nav ul li a:hover {
+		color: black;
+		border: none;
+	}
+	
+	footer {
+		height: 149px;
+	}
+}
+
+@media (max-width: 550px) {
+	footer {
+		height: 149px;
+	}
+}
