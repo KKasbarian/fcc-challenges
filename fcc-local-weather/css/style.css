@@ -1,0 +1,501 @@
+/* Main */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1488cc;
+    background: -webkit-linear-gradient(to right, #2b32b2, #1488cc);
+    background: linear-gradient(to right, #2b32b2, #1488cc);
+}
+
+a{
+    color: #252525;
+    text-decoration: none;
+}
+
+/* Main Grid Container */
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: 80px 50px 350px 100px 100px;
+    height: 100vh;
+    margin: 0 25px;
+}
+
+/* Header */
+
+#header {
+    grid-area: 1 / 2 / 2 / 10;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header #title h1 {
+    font-size: 34px;
+    font-family: 'Montserrat', arial, sans-serif;
+    font-weight: 700;
+    color: #eee;
+}
+
+#header #search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#header #search input {
+    padding: 10px;
+    width: 300px;
+    font-size: 13px;
+    font-family: 'Open Sans', arial, sans-serif;
+    font-weight: 400;
+    background: #fff;
+    outline: none;
+    border: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-transition: ease-out .3s;
+       -moz-transition: ease-out .3s;
+        -ms-transition: ease-out .3s;
+         -o-transition: ease-out .3s;
+            transition: ease-out .3s;
+}
+
+#header #search input:focus {
+    background: #eee;
+}
+
+#header #search a {
+    padding: 10px;
+    background: #fff;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    -webkit-transition: ease-in .3s;
+       -moz-transition: ease-in .3s;
+        -ms-transition: ease-in .3s;
+         -o-transition: ease-in .3s;
+            transition: ease-in .3s;
+}
+
+#header #search svg {
+    margin-right: 2px;
+    color: #252525;
+    opacity: 0.9;
+    -webkit-transition: ease-in .3s;
+       -moz-transition: ease-in .3s;
+        -ms-transition: ease-in .3s;
+         -o-transition: ease-in .3s;
+            transition: ease-in .3s;
+}
+
+#header #search a:hover {
+    background: #eee;
+}
+
+#header #search a:hover svg {
+    color: #000;
+    opacity: 1;
+}
+
+/* Weather Details */
+
+#w-details {
+    grid-area: 3 / 1 / 5 / 7;
+    width: 80%;
+    margin: 0 auto;
+    background: #243b55;
+    border-radius: 5px;
+    box-shadow: 7px 7px 16px rgba(34, 34, 34, 1);
+}
+
+/* Weather Important Details */
+
+#w-details #w-important-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    margin: 20px 0;
+}
+
+#w-details #w-important-details div {
+    margin: 0 20px;
+}
+
+/* Weather Icon */
+
+#w-details #w-important-details #weather-icon i {
+    font-size: 120px;
+    color: #1488cc;
+}
+
+/* Main Weather Info */
+
+#w-details #w-main-info #main-temp {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+#w-details #w-main-info #main-temp #temp {
+    margin-right: 25px;
+    font-size: 40px;
+    font-family: 'Montserrat', arial, sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+#w-details #w-main-info #main-temp button {
+    font-size: 25px;
+    font-family: 'Open Sans', arial, sans-serif;
+    font-weight: 300;
+    color: #ecf0f3;
+    background: transparent;
+    border: none;
+    outline: none;
+    -webkit-transition: ease-in .5s;
+       -moz-transition: ease-in .5s;
+        -ms-transition: ease-in .5s;
+         -o-transition: ease-in .5s;
+            transition: ease-in .5s;
+}
+
+#w-details #w-main-info #main-temp button#t-temp {
+    color: #1488cc;
+    cursor: pointer;
+}
+
+#w-details #w-main-info #main-temp .temp-seperator {
+    margin: 0 6px;
+    font-size: 24px;
+    color: #2b32b2;
+}
+
+#w-details #w-main-info #w-description {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Montserrat', arial, sans-serif;
+    font-weight: 400;
+    color: #ecf0f3;
+}
+
+#w-details #w-main-info #min-max-temp {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-family: 'Open Sans', arial, sans-serif;
+    font-weight: 400;
+    color: #fff;    
+}
+
+#w-details #w-main-info #min-max-temp span:first-child {
+    margin-right: 10px;
+}
+
+#w-details #w-main-info #min-max-temp span > span {
+    font-size: 15px;
+    color: #ecf0f3;
+}
+
+#w-details #w-main-info #country-info {
+    font-size: 25px;
+    font-family: 'Montserrat', arial, sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+/* Additional Weather Info */
+
+#w-details #w-additional-info {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0;
+}
+
+#w-details #w-additional-info i {
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: #ecf0f3;
+}
+
+#w-details #w-additional-info #w-refresh i {
+    font-size: 55px;
+    color: #fff;
+    -webkit-transition: ease-in .7s;
+       -moz-transition: ease-in .7s;
+        -ms-transition: ease-in .7s;
+         -o-transition: ease-in .7s;
+            transition: ease-in .7s;
+}
+
+#w-details #w-additional-info #w-refresh a:hover i {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+}
+
+#w-details #w-additional-info p {
+    font-size: 19px;
+    font-family: 'Montserrat', arial, sans-serif;
+    font-weight: 400;
+    color: #ecf0f3;
+}
+
+#w-details #w-additional-info p span {
+    color: #fff;
+}
+
+/* Date and Time */
+
+#date-time-container {
+    text-align: center;
+    grid-area: 3 / 7 / 4 / 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5px;
+}
+
+#date-time-container #date {
+    padding: 30px 50px;
+    margin-bottom: 20px;
+    background: #243b55;
+    color: #068cda;
+    border-radius: 1px;
+    box-shadow: 3px 3px 8px rgba(34, 34, 34, 0.6);
+}
+
+#date-time-container #date #date-month {
+    font-size: 32px;
+    font-family: 'Open Sans', arial, sans-serif;
+    font-weight: 400;
+}
+
+#date-time-container #date #date-day {
+    font-size: 70px;
+    font-family: 'Montserrat', arial, sans-serif;
+    font-weight: 700;
+}
+
+#date-time-container #date #date-year {
+    font-size: 30px;
+    font-family: 'Open Sans', arial, sans-serif;
+    font-weight: 300;
+}
+
+#date-time-container #time {
+    padding: 10px 40px;
+    background: #243b55;
+    color: #1488cc;
+    animation: timeFade 5.0s infinite;
+}
+
+@keyframes timeFade {
+    0% {opacity: 1;}
+    25% {opacity: 0.9;}
+    50% {opacity: 0.8;}
+    75% {opacity: 0.9;}
+    100% {opacity: 1;}
+}
+
+#date-time-container #time #t-time {
+    font-size: 30px;
+    font-family: 'Montserrat', arial, sans-serif;
+    font-weight: 300;
+}
+
+/* GitHub Buttons */
+
+#github-btns {
+    grid-area: 4 / 7 / 5 / 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Footer */
+
+footer {
+    grid-area: 5 / 1 / 6 / 11;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 20px;
+    font-family: 'Open Sans', arial, sans-serif;
+    font-weight: 400;
+    color: #111;
+}
+
+footer a {
+    color: #222;
+    opacity: 0.9;
+    -webkit-transition: ease-out .3s;
+       -moz-transition: ease-out .3s;
+        -ms-transition: ease-out .3s;
+         -o-transition: ease-out .3s;
+            transition: ease-out .3s;
+}
+
+footer a:hover {
+    color: #000;
+    opacity: 1;
+}
+
+footer svg {
+    margin: 0 5px;
+}
+
+/*** Media Queries ***/
+
+@media screen and (min-width: 860px) and (max-width: 1100px) {
+    #header #title h1 {
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    /* Main Grid Container */
+
+    #container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, auto);
+        height: auto;
+        margin: 0;
+    }
+
+    /* Header */
+
+    #header {
+        grid-area: 1 / 1 / 2 / 2;
+        height: auto;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    #header div {
+        margin: 14px 0;
+    }
+
+    #header #title h1 {
+        text-align: center;
+        color: #fff;
+    }
+
+    #header #search {
+        width: 100%;
+    }
+
+    #header #search input {
+        width: 80%;
+    }
+
+    /* Weather Details */
+
+    #w-details {
+        grid-area: 2 / 1 / 3 / 2;
+        width: 90%;
+    }
+
+    #w-details #w-important-details {
+        text-align: center;
+        display: block;
+        padding: 20px 0;
+        margin: 0;
+    }
+
+    #w-details #w-important-details #weather-icon i {
+        font-size: 100px;
+    }
+
+    #w-details #w-main-info #main-temp {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    #w-details #w-main-info #main-temp #temp {
+        font-size: 35px;
+    }
+
+    #w-details #w-additional-info {
+        text-align: center;
+        display: block;
+        padding: 20px 0;
+    }
+
+    #w-details #w-additional-info div {
+        margin: 20px 0;
+    }
+
+    #w-details #w-additional-info i {
+        margin-bottom: 15px;
+        font-size: 50px;
+    }
+
+    #w-details #w-additional-info #w-refresh i {
+        font-size: 60px;
+    }
+
+    /* Date and Time */
+
+    #date-time-container {
+        text-align: center;
+        grid-area: 3 / 1 / 4 / 2;
+        display: block;
+        padding: 40px 0 20px 0;
+    }
+
+    #date-time-container #date {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    #date-time-container #time {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    /* GitHub Buttons */
+
+    #github-btns {
+        grid-area: 4 / 1 / 5 / 2;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    #github-btns div {
+        margin: 10px 0;
+    }
+
+    /* Footer */
+
+    footer {
+        text-align: center;
+        grid-area: 5 / 1 / 6 / 2;
+        display: block;
+        padding: 20px 0;
+        background: #ecf0f3;
+    }
+}

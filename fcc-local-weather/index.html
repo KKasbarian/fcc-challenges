@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Application</title>
+    <!-- <meta http-equiv="refresh" content="30"> --> <!-- Optional!! Auto-Refresh pages every x seconds -->
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
+    <!-- Local CSS files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/weather-icons.css">
+    <link rel="stylesheet" href="css/weather-icons-wind.css">
+    
+    <!-- GitHub Buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- Search Autocomplete -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYgA75U5hGlcSIqS--W_zQ4sn6LbMxaIo&libraries=places"></script>
+    
+</head>
+<body>
+    <!-- Main Grid Container -->
+    <div id="container">
+
+        <!-- Header -->
+        <header id="header">
+
+            <!-- Application Title -->
+            <div id="title">
+                <h1>Local Weather Application</h1>
+            </div> <!-- END Application Title -->
+
+            <!-- Search Feature -->
+            <div id="search">
+                <input id="place-search" type="text" name="search" placeholder="Search your city...">
+                <a href="#" onClick="placeSearch()"><i class="fas fa-search"></i></a>
+            </div> <!-- END Search Feature -->
+
+        </header> <!-- END Header -->
+
+        <!-- Weather Details -->
+        <section id="w-details">
+
+            <!-- Weather Important Details -->
+            <div id="w-important-details">
+    
+                <!-- Weather Icon -->
+                <div id="weather-icon">
+                    <i class="wi wi-na"></i> <!-- Weather Icon -->
+                </div> <!-- END Weather Icon -->
+
+                <!-- Weather Main Info -->
+                <div id="w-main-info">
+
+                    <p id="main-temp"> <!-- Main Temp -->
+                        <span id="temp">--|-- <sup>o</sup></span>
+                        <button href="#" id="c-temp" onclick="toC()" disabled><span>C </span></button> <!-- On Click, make the other smaller -->
+                        <span class="temp-seperator">|</span>
+                        <button href="#" id="t-temp" onclick="toF()"><span> F </span></button> <!-- On Click, add <sup>o</sup> -->
+                    </p> <!-- END Main Temp -->
+
+                    <!-- Weather Description -->
+                    <p id="w-description">Loading...</p>
+
+                    <!-- Min and Max Temperature -->
+                    <p id="min-max-temp">
+                        <span id="min-temperature">Min: <span id="min-temp">--|--</span></span>
+                        <span id="max-temperature">Max: <span id="max-temp">--|--</span></span>
+                    </p> <!-- END Min and Max Temperature -->
+
+                    <!-- Country Info -->
+                    <h2 id="country-info">City, Country</h2>
+
+                </div> <!-- END Weather Main Info -->
+
+            </div> <!-- END Weather Important Details -->
+
+            <!-- Weather Additional Info -->
+            <div id="w-additional-info">
+                <div id="w-humidity" title="Humidity">
+                    <i class="wi wi-humidity"></i>
+                    <p id="humidity">--|-- <span>%</span></p>
+                </div>
+                <div id="w-wind" title="Wind">
+                    <i class="wi wi-windy"></i>
+                    <p id="wind">--|-- <span>km/h</span></p>
+                </div>
+                <div id="w-refresh" title="Refresh">
+                    <a href=""><i class="wi wi-refresh"></i></a>
+                    <p>Refresh</p>
+                </div>
+            </div> <!-- END Weather Additional Info -->
+
+        </section> <!-- END Weather Details -->
+
+        <!-- Date and Time -->
+        <section id="date-time-container">
+
+            <!-- Date -->
+            <div id="date">
+                <p id="date-month"></p>
+                <h2 id="date-day"></h2>
+                <p id="date-year"></p>
+            </div>
+
+            <!-- Time -->
+            <div id="time">
+                <p id="t-time"><!-- 00<span class="time-seperator"> : </span>00<span class="time-seperator"></span> : </span>00 --></p>
+            </div>
+        </section> <!-- END Date and Time -->
+
+        <!-- GitHub Buttons -->
+        <section id="github-btns">
+            <!-- Star Button -->
+            <div>
+                <a class="github-button" href="https://github.com/kkasbarian/fcc-challenges" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star kkasbarian/fcc-challenges on GitHub">Star</a>
+            </div>
+            <!-- Follow Button -->
+            <div>
+                <a class="github-button" href="https://github.com/kkasbarian" data-size="large" data-show-count="true" aria-label="Follow @kkasbarian on GitHub" >Follow @kkasbarian</a>
+            </div>
+        </section> <!-- END GitHub Buttons -->
+        
+        <!-- Footer -->
+        <footer>
+            <p>Made by <a href="http://kkasbarian.com">Kourken K. </a><sup> &copy;</sup> 2018. All Rights Reserved. <a href="https://github.com/KKasbarian" target="_blank"><i class="fab fa-github"></i></a> <a href="https://twitter.com/KourkenK" target="_blank"><i class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/in/kourken-kasbarian/" target="_blank"><i class="fab fa-linkedin-in"></i></a></p>
+        </footer> <!-- END Footer -->
+
+    </div> <!-- END Main Grid Container -->
+
+    <!-- Main JS File and jQuery CDN -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+</html>
