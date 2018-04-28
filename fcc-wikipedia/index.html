@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wiker - Wikipedia Viewer</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <!-- Animations on Results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- GitHub Buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auto-complete.css">
+</head>
+<body>
+
+    <!-- Main Container -->
+    <section id="container">
+
+        <!-- Title Section -->
+        <section id="title">
+            <img src="img/icon.png" alt="Wiker - Wikipedia Viewer">
+            <h1>Wiker</h1>
+        </section> <!-- End Title Section -->
+
+        <!-- Search Section -->
+        <section id="search-container">
+            <!-- Search Input -->
+            <input type="text" id="search-field" name="search-field" placeholder="Search Wiker...">
+            <!-- Search Buttons -->
+            <div class="search-btns">
+                <button href="#" id="submit-btn" onclick="fetchWikiResult()">Wiker Search</button>
+                <a href="https://en.wikipedia.org/wiki/Special:Random" class="rand-btn" target="_blank"><i class="fas fa-random"></i> I'm Feeling Lucky</a>
+            </div>
+        </section> <!-- END Search Section -->
+
+        <!-- Search Result Info -->
+        <div id="search-res-info">
+            <p id="res-num"></p>
+            <h1><p id="res-search-info">Search WikiPedia...</p></h1>
+        </div>
+
+        <!-- Search Results -->
+        <div id="search-results"></div>
+
+        <!-- GitHub Buttons -->
+        <section id="github-btns">
+            <div>
+                <a class="github-button" href="https://github.com/kkasbarian" data-size="large" data-show-count="true" aria-label="Follow @kkasbarian on GitHub">Follow @kkasbarian</a>
+            </div>
+            <div>
+                <a class="github-button" href="https://github.com/kkasbarian/fcc-challenges" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star kkasbarian/fcc-challenges on GitHub">Star</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Made by <a href="http://kkasbarian.com">Kourken K. </a><sup> &copy;</sup> 2018. All Rights Reserved. <a href="https://github.com/KKasbarian" target="_blank"><i class="fab fa-github"></i></a> <a href="https://twitter.com/KourkenK" target="_blank"><i class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/in/kourken-kasbarian/" target="_blank"><i class="fab fa-linkedin-in"></i></a></p>
+        </footer> <!-- END Footer -->
+
+    </section> <!-- END Main Container -->
+
+    <!-- JS Files -->
+    <!-- Input Autocomplete Suggestions -->
+    <script src="js/auto-complete.min.js"></script>
+    <!-- Main JS File -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
