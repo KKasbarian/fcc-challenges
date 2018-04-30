@@ -212,6 +212,18 @@ img {
     line-height: 1.4;
 }
 
+#search-results .no-res {
+    text-align: center;
+    margin: 30px auto;
+}
+
+#search-results .no-res-text {
+    font-size: 30px;
+    font-family: 'Open Sans', arial, sans-serif;
+    font-weight: 700;
+    color: #d3d3d3;
+}
+
 /* Footer */
 
 footer {

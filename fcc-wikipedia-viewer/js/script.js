@@ -35,6 +35,12 @@ function fetchWikiResult() {
                 search_answer.innerHTML = 'Searched: ' +  input.value;
             }
             appendWikiResults(wikiData);
+            if (wikiData[1].length == 0) {
+                search_res.innerHTML +=
+                    "<div class='no-res'>" +
+                    "<h2 class='no-res-text'>No results found. Search again!!</h2>" +
+                    "</div>";
+            }
         } else {
             alert("No network errors, but an error from the server was accured. Try again in few minutes!");
         }
