@@ -9,5 +9,3 @@ Random Quote Generator: [Random Quote Generator](https://www.kkasbarian.com/fcc-
 Local Weather Application: [Local Weather Application](https://www.kkasbarian.com/fcc-challenges/fcc-local-weather/)
 
 WikiPedia Viewer: [WikiPedia Viewer](https://www.kkasbarian.com/fcc-challenges/fcc-wikipedia-viewer/)
-
-Twitch JSON API: Coming Soon...
